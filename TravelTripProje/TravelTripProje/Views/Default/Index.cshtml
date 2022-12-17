@@ -1,0 +1,116 @@
+﻿@using TravelTripProje.Models.Siniflar
+@model List<Blog>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<body>
+    
+    
+    <div class="header-banner">
+        <div class="wrap">
+            <div class="banner">
+                <div class="indent">
+                    <h2 class="indent-left margin-bot">BAŞKENT</h2>
+                    
+                    <div class="header_bottom_right_images">
+
+                        <div class="slider" style ="width:950px;height:500px;">
+                            <ul class="rslides" id="slider1">
+                                @foreach (var x in Model)
+                                {
+                                <li><img src="@x.BlogImage"style ="width:950px;height:500px;" alt=""></li>
+                               @* <li><img src="~/web/images/img2.jpg" alt=""></li>
+                                <li><img src="~/web/images/img3.jpg" alt=""></li>
+                                <li><img src="~/web/images/img4.jpg" alt=""></li>*@
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class"content">
+        <div class="wrap">
+            <div class="wrapper">
+                <div class="con-top">
+                    <h3>Ankara Seyahat Bloğuma Hoşgeldin</h3>
+                    <p> Bu proje fikrine 2022 yılında karar verdim . Şuan sizlerle buluşturmanın mutluluğunu yaşıyorum. Bu web sitede amacım Ankaraya uğrayacak seyahat edecek kişilerin daha verimli ve planlı gezebilmesi için tasarladım umarım yardımcı olur </p>
+                </div>
+                @Html.Action("Partial1","Default")
+                <div class="grids">
+                    <div class="box1">
+                        @Html.Action("Partial3","Default")
+                        <div class="padding1">
+                            <h4>YEMEDEN GİTME </h4>
+                            <div class="box-left">
+                                
+                                <div class="bot-img">
+                                    <img src="~/web/images/aspava.jpeg" alt="" style ="width:150px;height:100px;" />
+                                </div>
+                                <div class="bot-desc">
+                                    <p>ASPAVA.Ankara’nın nesi meşhur diye sorduğunuzda şüphesiz ki alacağınız cevaplardan biridir Aspava.  </p>
+                                </div>
+                                <div class="clear"></div>
+                                <div class="bot-img">
+                                    <img src="~/web/images/ankara tava.jpeg" alt=""  style ="width:150px;height:100px;"/>
+                                </div>
+                                <div class="bot-desc">
+                                    <p>Ankara Tavası, eski Ankara mutfağına ait bir yemektir. Ankara il sınırları dışında en iyi bilinen yerel yemeklerden biridir. </p>
+                                </div>
+                                <div class="clear"></div>
+                                <div class="bot-img">
+                                    <img src="~/web/images/kurusu.jpeg" alt="" style ="width:150px;height:100px;" />
+                                </div>
+                                <div class="bot-desc">
+                                    <p>Beypazarı kurusu, Ankara'nın Beypazarı ilçesine has bir kurabiyedir. </p>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="box1-left">
+                                <div class="bot-img">
+                                    <img src="~/web/images/kokoreç.jpeg" alt=""  style ="width:150px;height:100px;" />
+                                </div>
+                                <div class="bot-desc1">
+                                    <p>Atatürk Orman Çiftliğinde Yediğin Kokoreç Hiç Bir Şeye Benzemez. </p>
+                                </div>
+                                <div class="clear"></div>
+                                <div class="bot-img">
+                                    <img src="~/web/images/ankara simidi.jpg" alt=""  style ="width:150px;height:100px;"/>
+                                </div>
+                                <div class="bot-desc1">
+                                    <p>İzmirliler ona gevrek desin dursun, Ankara'nın simidi bambaşkadır. Sabah sıcacık yediğinizde o kavrulmuş tadı alırsınız. </p>
+                                </div>
+                                <div class="clear"></div>
+                                <div class="bot-img">
+                                    <img src="~/web/images/şibit-tatlısı.jpg" alt="" style ="width:150px;height:100px;" /> 
+                                </div>
+                                <div class="bot-desc1">
+                                    <p> Şibit tatlısı İnce yufka gibi açılan hamurların sac üzerinde pişirilmesi, baklava şeklinde kesilmesi ve şerbetle buluşmasıyla oluşur.  </p>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
+
+
